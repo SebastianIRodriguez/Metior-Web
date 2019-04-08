@@ -11,43 +11,43 @@
   </head>
 
   <body>
-      <div id="header">
-      <table style="margin:0px; height:100%; width:100%;">
-	       <tr>
-		         <td style="width:150px"><img src="logo_metior.png" id="logo"></td>
-		         <td><strong>Metior</strong></td>
-		         <td>
-               <button id="boton-inicio" class="foo-button mdc-button" style="color:#212121; font-size:25px">Inicio</button>
-               <script type="text/javascript">
-                  document.getElementById("boton-inicio").onclick = function () {
-                    location.href = "inicio.html";
-                  };
-               </script>
-             </td>
-		         <td>
-               <button id="boton-como-fun" class="foo-button mdc-button" style="position:relative;left: 65px;color:#212121; font-size:25px">¿Como Funciona?</button>
-               <script type="text/javascript">
-                  document.getElementById("boton-como-fun").onclick = function () {
-                    location.href = "como-funciona.html";
-                  };
-               </script>
-             </td>
-		         <td>
-               <button id="boton-contacto" class="foo-button mdc-button" style="color:#212121; font-size:25px">Contactenos</button>
-               <script type="text/javascript">
-                  document.getElementById("boton-contacto").onclick = function () {
-                    location.href = "contacto.html";
-                  };
-               </script>
-             </td>
-	      </tr>
-      </table>
-      </div>
+    <div id="header" class="flex-container">
+     
+	    <img style="flex-grow: 1" src="logo_metior.png" id="logo" >
+
+	    <strong style="flex-grow: 1">Metior</strong>
+             
+      <a style="flex-grow: 1" class= "tab" href="inicio.html">Inicio</a>
+
+      <a style="flex-grow: 1" class= "tab" href="como-funciona.html">¿Como Funciona?</a>
+
+      <a style="flex-grow: 1" class= "tab" href="contacto.html">Contactenos</a>
+
+    </div>
+
       <div id="cuerpo">
         <h1 style= "padding-top:20px;padding-left:20px">¿Como Funciona?</h1>
         <p class="parrafos">
           mini tuto
         </p>
       </div>
+
+      <script type="text/javascript">
+        document.getElementById("boton-inicio").onclick = function () {
+          location.href = "inicio.html";
+        };
+      </script>
+
+      <script type="text/javascript">
+        document.getElementById("boton-como-fun").onclick = function () {
+          location.href = "como-funciona.html";
+        };
+      </script>
+
+      <script type="text/javascript">
+        document.getElementById("boton-contacto").onclick = function () {
+          location.href = "contacto.html";
+        };
+      </script>
   </body>
 </html>
