@@ -7,7 +7,37 @@
      <link rel="icon" href="logo_metior.png">
      <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
      <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-     <link rel="stylesheet" href="estilos.css">
+     <style>
+       body{
+         background-color: #212121;
+	       font-family: Roboto;
+       }
+       #header{
+        color: #212121;
+        font-size: 100px;
+        position: static;
+        background-color: #cc6600;
+        height: 200px;
+	      width: 100%;
+	      margin: 0px;
+        display:flex;
+        justify-content: flex-start;
+      }
+	    #logo{
+	      height: 150px;
+	      width: 150px;
+      }
+      #cuerpo{
+        position: static;
+        color: #212121;
+        background-color: #cc6600;
+        height: 800px;
+        width: 100%;
+      }
+      .parrafos{
+        padding-left: 20px;
+      }
+    </style>
   </head>
 
   <body>
@@ -29,7 +59,7 @@
             </script>
           </td>
           <td style="width:25%">
-            <button id="boton-como-fun" class="foo-button mdc-button" style="color:#212121; font-size:25px">¿Como Funciona?</button>
+            <button id="boton-como-fun" class="foo-button mdc-button" style="color:#212121; height: 50%;   font-size:25px">¿Como Funciona?</button>
             <script type="text/javascript">
                document.getElementById("boton-como-fun").onclick = function () {
                location.href = "como-funciona.html";
