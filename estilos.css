@@ -14,8 +14,8 @@ body{
  justify-content: flex-start;
 }
 #logo{
-  height: 150px;
-  width: 150px;
+  height: 100%;
+  object-fit: contain;
 }
 #cuerpo{
   color: #212121;
@@ -60,6 +60,7 @@ body{
 .parrafos{
   padding-left: 20px;
 }
+
 .tabla-header{
   margin:0px;
   height:100%;
