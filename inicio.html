@@ -2,53 +2,57 @@
 <html>
   <head>
     <meta charset="UTF-8">
-	   <link rel="stylesheet" href="https://unpkg.com/material-components-web/dist/material-components-web.min.css">
+
      <title>Metior</title>
      <link rel="icon" href="logo_metior.png">
      <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
      <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-     <link rel="stylesheet" href="estilos.css">
+     <link rel="stylesheet" type="text/css" href="estilos.css"/>
   </head>
 
   <body>
       <div id="header">
-      <table style="margin:0px; height:100%; width:100%;">
+      <table class="tabla-header">
 	       <tr>
-		         <td style="width:150px"><img src="logo_metior.png" id="logo"></td>
+		         <td id="columna-logo"><img src="logo_metior.png" id="logo"></td>
 		         <td><strong>Metior</strong></td>
-		         <td>
-               <button id="boton-inicio" class="foo-button mdc-button" style="color:#212121; font-size:25px">Inicio</button>
-               <script type="text/javascript">
-                  document.getElementById("boton-inicio").onclick = function () {
-                  location.href = "inicio.html";
-                  };
-               </script>
-             </td>
-		         <td>
-               <button id="boton-como-fun" class="foo-button mdc-button" style="position:relative;left: 65px;color:#212121; font-size:25px">¿Como Funciona?</button>
-               <script type="text/javascript">
-                  document.getElementById("boton-como-fun").onclick = function () {
-                  location.href = "como-funciona.html";
-                  };
-               </script>
-             </td>
-		         <td>
-               <button id="boton-contacto" class="foo-button mdc-button" style="color:#212121; font-size:25px">Contactenos</button>
-               <script type="text/javascript">
-                  document.getElementById("boton-contacto").onclick = function () {
-                  location.href = "contacto.html";
-                  };
-               </script>
-             </td>
 	      </tr>
+      </table>
+      <table class="tabla-header">
+        <tr>
+          <td id="columna-b-ini">
+            <button id="boton-inicio" class="foo-button mdc-button">Inicio</button>
+            <script type="text/javascript">
+               document.getElementById("boton-inicio").onclick = function () {
+               location.href = "inicio.html";
+               };
+            </script>
+          </td>
+          <td id="columna-b-func">
+            <button id="boton-como-fun" class="foo-button mdc-button">¿Como Funciona?</button>
+            <script type="text/javascript">
+               document.getElementById("boton-como-fun").onclick = function () {
+               location.href = "como-funciona.html";
+               };
+            </script>
+          </td>
+          <td id="columna-b-cont">
+            <button id="boton-contacto" class="foo-button mdc-button">Contactenos</button>
+            <script type="text/javascript">
+               document.getElementById("boton-contacto").onclick = function () {
+               location.href = "contacto.html";
+               };
+            </script>
+          </td>
+        </tr>
       </table>
       </div>
       <div id="cuerpo">
-        <h1 style= "padding-top:20px;padding-left:20px">¿Que es Metior?</h1>
+        <h1 id="primer-h1" class="parrafos">¿Que es Metior?</h1>
         <p class="parrafos">
           ff<br/>z<br/>z<br/>z<br/>z<br/>
         </p>
-        <iframe width="420" height="315" style="position: relative;left: 20px;"src="https://www.youtube.com/embed/-7d0ElfTUQ8"></iframe>
+        <iframe width="420" height="315" id="video" src="https://www.youtube.com/embed/-7d0ElfTUQ8"></iframe>
       </div>
   </body>
 </html>
