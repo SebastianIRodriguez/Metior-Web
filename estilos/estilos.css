@@ -18,7 +18,7 @@ position: relative;
 }
 
 .seccion1::before {
-background-image: url(fondo1.png);
+background-image: url(../img/fondo1.png);
 background-size: 1583px 938px;
 background-repeat: no-repeat;
 background-position: 50% 50%;
@@ -60,6 +60,10 @@ min-height: 12em;
 position: relative;
 }
 
+.fondo2::before {
+  background-image: url(../img/diagnocl.png);
+}
+
 .seccion1-message::before {
 content: "";
 display: block;
@@ -87,9 +91,6 @@ font-size: 2.8em;
 font-weight: 900;
 text-transform: uppercase;
 }
-
-
-
 
 #header{
  color: #212121;
