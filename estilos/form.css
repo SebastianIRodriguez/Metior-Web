@@ -1,0 +1,9 @@
+#bloque-contacto{
+	background-color: #606060;
+	color: #eeeeee;
+	width: 35%;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
