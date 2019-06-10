@@ -10,6 +10,7 @@
      <link rel="stylesheet" type="text/css" href="../estilos/boton.css"/>
 	 <link rel="stylesheet" type="text/css" href="../estilos/materialize.min.css"/>
 	 <link rel="stylesheet" type="text/css" href="../estilos/form.css"/>
+   <script type="text/javascript" src="ejemplos.js"></script>
   </head>
 
   <body>
@@ -53,11 +54,11 @@
           <div class="fondo2 seccion1 flex-center"><!--script>document.getElementById("seccion2").style="background-image: url(../img/diagnocl.png);"</script-->
             <div id="bloque-contacto">
               <h1 class="seccion1-title">Contactenos</h1>
-              <form method="post" action="../mail/mail.php" class="seccion1-sub-title">
-                <input type="text" name="nombre" placeholder="Nombre"><br><br>
-                <input type="text" name="mail" placeholder="E-mail"><br><br>
-                <textarea name="mensaje" cols="30" rows="10" placeholder="Comentario"></textarea><br><br>
-                <input class="foo-button mdc-button" style="color:#fff" type="submit">
+              <form class="seccion1-sub-title">
+                <input type="text" id="nombre_usuario" placeholder="Nombre"><br><br>
+                <input type="text" id="ape_usuario" placeholder="Apellido"><br><br>
+                <input type="text" id="direccion_usuario" placeholder="Direccion"><br><br>
+                <input class="foo-button mdc-button" style="color:#fff" type="submit" onclick="grabar();">
               </form>
             </div>
 
