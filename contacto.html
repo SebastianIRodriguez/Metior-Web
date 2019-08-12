@@ -51,26 +51,37 @@
         </tr>
       </table>
       </div>
-      <div id="cuerpo">
-          <div class="fondo2 seccion1 flex-center"><!--script>document.getElementById("seccion2").style="background-image: url(../img/diagnocl.png);"</script-->
-            <div id="bloque-contacto">
-              <h1 class="seccion1-title">Contactenos</h1>
-              <form class="seccion1-sub-title">
+      <div id="cuerpo" class="flex-center">
+        <div class="seccion1 fondo2 flex-center">
+          <div class="bloque-contacto flex-center">
+            <h1 class="seccion1-title">Contactenos</h1>
+            <form class="seccion1-sub-title input-field col s6">
                 <input type="text" id="nombre_usuario" placeholder="Nombre"><br><br>
                 <input type="text" id="ape_usuario" placeholder="Apellido"><br><br>
                 <input type="text" id="direccion_usuario" placeholder="Direccion"><br><br>
-                <input class="mdc-button" style="color:#fff" type="submit" onclick="grabar();">
-              </form>
-            </div>
-          <button id="boton-comprar" style="background-color:white" class="mdc-button">Comprar</button>
-
-          <script type="text/javascript">
-               document.getElementById("boton-comprar").onclick = function () {
-               location.href = "ventana-compras.html";
-               };
-          </script>
-
+                <span style="display: flex;justify-content: space-around;">
+                  <input class="mdc-button" style="color:#fff" type="submit" onclick="grabar();">
+                  <button id="boton-comprar" style="background-color:white" class="mdc-button">Comprar</button>
+                  <script type="text/javascript">
+                       document.getElementById("boton-comprar").onclick = function () {
+                       location.href = "ventana-compras.html";
+                       };
+                  </script>
+                </span>
+            </form>
           </div>
+        </div>
+      </div>
+      <div class="footer">
+        <p style="text-align: center; font-size: 20px">
+          DiagnoCl | Metior<br>
+          Av. Siempre Viva 1234 | tel: +54 111 1234 567<br>
+          metior@org.ar
+        </p>
+        <p style="text-align: center; font-size: 20px">
+          © Todos los derechos reservados<br>
+          <a href="#">Términos y condiciones</a>
+        </p>
       </div>
   </body>
 </html>
