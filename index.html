@@ -7,8 +7,21 @@
   <link rel="icon" href="./img/logo_metior.png">
   <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
   <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+  
   <link rel="stylesheet" type="text/css" href="./css/estilos.css" />
   <link rel="stylesheet" type="text/css" href="./css/boton.css" />
+  <link rel="stylesheet" type="text/css" href="./css/form.css"/>
+  <link rel="stylesheet" type="text/css" href="./css/materialize.min.css"/>
+
+  <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script type="text/javascript" src="./js/ejemplos.js"></script>
+  <script src="jquery.js"></script>
+
+    <script>
+    $( document ).ready(function() {
+        $('#cuerpo').load('inicio.html');
+    });
+    </script>
 </head>
 
 <body>
@@ -25,7 +38,7 @@
           <button id="boton-inicio" class="mdc-button">Inicio</button>
           <script type="text/javascript">
             document.getElementById("boton-inicio").onclick = function () {
-              location.href = "index.html";
+              $("#cuerpo").load("inicio.html");
             };
           </script>
         </td>
@@ -33,7 +46,7 @@
           <button id="boton-como-fun" class="mdc-button">¿Como Funciona?</button>
           <script type="text/javascript">
             document.getElementById("boton-como-fun").onclick = function () {
-              location.href = "como-funciona.html";
+              $("#cuerpo").load("como-funciona.html");
             };
           </script>
         </td>
@@ -41,7 +54,7 @@
           <button id="boton-contacto" class="mdc-button">Contactenos</button>
           <script type="text/javascript">
             document.getElementById("boton-contacto").onclick = function () {
-              location.href = "contacto.html";
+               $("#cuerpo").load("contacto.html");
             };
           </script>
         </td>
@@ -49,13 +62,7 @@
     </table>
   </div>
   <div id="cuerpo">
-    <div class="seccion1 flex-center">
-      <div class="seccion1-message">
-        <h1 class="seccion1-title">Diagnóstico para Inyección Electrónica</h1>
-        <p class="seccion1-sub-title">Metior es la nueva herramienta para diagnóstico automotor con fantásticas funcionalidades</p>
-      </div>
-
-    </div>
+    <div w3-include-html="inicio.html"></div> 
   </div>
   <div class="footer">
         <p style="text-align: center; font-size: 20px">
@@ -69,5 +76,4 @@
         </p>
   </div>
 </body>
-
 </html>
