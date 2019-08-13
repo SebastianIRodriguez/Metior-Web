@@ -18,9 +18,29 @@
   <script src="jquery.js"></script>
 
     <script>
-    $( document ).ready(function() {
-        $('#cuerpo').load('inicio.html');
-    });
+      var getUrlParameter = function getUrlParameter(sParam) {
+      var sPageURL = window.location.search.substring(1),
+          sURLVariables = sPageURL.split('&'),
+          sParameterName,
+          i;
+
+      for (i = 0; i < sURLVariables.length; i++) {
+          sParameterName = sURLVariables[i].split('=');
+
+          if (sParameterName[0] === sParam) {
+              return sParameterName[1] === undefined ? true : decodeURIComponent(sParameterName[1]);
+          }
+        }
+      };
+      $( document ).ready(function() {
+        var status = getUrlParameter("status");
+          if(status==1)
+            $('#cuerpo').load('como-funciona.html');
+          else if(status==2)
+            $('#cuerpo').load('contacto.html');  
+          else
+            $('#cuerpo').load('inicio.html');
+      });
     </script>
 </head>
 
@@ -39,6 +59,7 @@
           <script type="text/javascript">
             document.getElementById("boton-inicio").onclick = function () {
               $("#cuerpo").load("inicio.html");
+              location.href = '?status=0';
             };
           </script>
         </td>
@@ -47,6 +68,7 @@
           <script type="text/javascript">
             document.getElementById("boton-como-fun").onclick = function () {
               $("#cuerpo").load("como-funciona.html");
+              location.href = '?status=1';
             };
           </script>
         </td>
@@ -55,6 +77,7 @@
           <script type="text/javascript">
             document.getElementById("boton-contacto").onclick = function () {
                $("#cuerpo").load("contacto.html");
+               location.href = '?status=2';
             };
           </script>
         </td>
