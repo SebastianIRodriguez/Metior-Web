@@ -5,23 +5,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="">
     <meta name="author" content="">
-    <link rel="icon" href="../../../../favicon.ico">
+    <link rel="icon" href="./img/logo_metior.png">
 
     <title>Comprar Metior</title>
 
-    <!-- Bootstrap core CSS -->
     <link href="./css/colors.css" rel="stylesheet">
-
-    <!-- Custom styles for this template -->
     <link href="./css/form-validation.css" rel="stylesheet">
-    <link href="./css/colors.scss" rel="stylesheet">
+
   </head>
 
   <body class="bg-primary">
 
     <div class="container">
       <div class="py-5 text-center">
-        <img class="d-block mx-auto mb-4" src="https://getbootstrap.com/assets/brand/bootstrap-solid.svg" alt="" width="72" height="72">
         <h2>Comprar</h2>
       </div>
 
@@ -169,7 +165,7 @@
               </div>
             </div>
             <hr class="mb-4">
-            <button class="btn btn-primary btn-lg btn-block" type="submit">Continuar</button>
+            <button id="btn-continuar" class="btn btn-primary btn-lg btn-block" type="submit">Continuar</button>
           </form>
         </div>
       </div>
@@ -187,6 +183,7 @@
     <!-- Bootstrap core JavaScript
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="./js/lib/popper.min.js"></script>
     <script src="./js/lib/bootstrap.min.js"></script>
     <script src="./js/lib/holder.min.js"></script>
@@ -194,6 +191,10 @@
       // Example starter JavaScript for disabling form submissions if there are invalid fields
       (function() {
         'use strict';
+
+        document.getElementById("btn-continuar").onclick = function () {
+          location.assign("index.html");
+        };
 
         window.addEventListener('load', function() {
           // Fetch all the forms we want to apply custom Bootstrap validation styles to
