@@ -1,8 +1,13 @@
 <?php
 include "variables.php";
-$mysqli = new mysqli($host, $user, $pass, $base, $port) or die("Unable to connect");
 
-$cliente = $mysqli->query("create table if not exists clientes (
+echo "antes de conectar";
+
+$db = new mysqli($host, $user, $pass, $base) or die("Unable to connect");
+
+echo $db->info;
+
+$cliente = $db->query("create table if not exists clientes (
 	apellido	varchar(60),	
 	nombre		varchar(60),
 	direccion	varchar(60),

@@ -1,7 +1,6 @@
 <?php
 
 $host = 'localhost';
-$user = 'root';
-$pass = '';
-$base = 'prueba';
-$port = 3306; 
+$user = 'poli_uno';
+$pass = 'poli1';
+$base = 'poli_doce';

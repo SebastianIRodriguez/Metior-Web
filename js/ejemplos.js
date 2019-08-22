@@ -12,31 +12,18 @@ function grabar () {
 
 	console.log("grabar parametros" + parametros);
 
-	$.ajax({
-	    // En data puedes utilizar un objeto JSON, un array o un query string
-	    data: "x=" + parametros,
-	    //Cambiar a type: POST si necesario
-	    method: "post",
-	    // Formato de datos que se espera en la respuesta
-	    dataType: "json",
-	    // URL a la que se enviará la solicitud Ajax
-	    url: "grabar.php",
-	})
-	.done(function( data, textStatus, jqXHR ) {
-	     if ( console && console.log ) {
-	        console.log( "La solicitud se ha completado correctamente." );
-	        
-	        document.getElementById('nombre_usuario').value = '';
-			document.getElementById('ape_usuario').value = '';
-			document.getElementById('direccion_usuario').value = '';
-			leer();
-	     }
-	})
-	.fail(function( jqXHR, textStatus, errorThrown ) {
-	     if ( console && console.log ) {
-	         console.log( "La solicitud a fallado: " +  textStatus + " " + errorThrown);
-	     }
-	});
+	$.post('../php/grabar.php', "x=" + parametros,
+                function (data, status, xhr) {
+                   	if ( console && console.log ) {
+				        console.log( "La solicitud se ha completado correctamente." );
+				        
+				        document.getElementById('nombre_usuario').value = '';
+						document.getElementById('ape_usuario').value = '';
+						document.getElementById('direccion_usuario').value = '';
+						leer();
+				    }
+                }
+            );
 }
 
 function leer () {
