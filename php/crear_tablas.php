@@ -1,11 +1,15 @@
 <?php
 include "variables.php";
 
-echo "antes de conectar";
+ini_set('display_errors', 1);
+ini_set('display_startup_errors', 1);
+error_reporting(E_ALL);
+
+echo "antes de conectar\n";
 
 $db = new mysqli($host, $user, $pass, $base) or die("Unable to connect");
 
-echo $db->info;
+echo "Database info: " . $db->client_version;
 
 $cliente = $db->query("create table if not exists clientes (
 	apellido	varchar(60),	
