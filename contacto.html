@@ -1,124 +1,101 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-  <meta charset="UTF-8">
-  <title>Metior</title>
-  <link rel="icon" href="./img/logo_metior.png">
-  <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
-  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-  <link rel="stylesheet" type="text/css" href="./css/estilos.css"/>
-  <link rel="stylesheet" type="text/css" href="./css/boton.css"/>
-  <link rel="stylesheet" type="text/css" href="./css/form.css"/>
-  <link rel="stylesheet" type="text/css" href="./css/materialize.min.css"/>
-  <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-  <script type="text/javascript" >$( document ).ready(function() {
+    <meta charset="UTF-8">
+    <title>Metior</title>
+    <link rel="icon" href="./img/logo_metior.png">
+    
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" type="text/css" href="./css/estilos.css" />
+    <link rel="stylesheet" type="text/css" href="./css/boton.css" />
+    <link rel="stylesheet" type="text/css" href="./css/form.css" />
+    <link rel="stylesheet" type="text/css" href="./css/materialize.min.css" />
 
-  console.log("document ready");
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script type="text/javascript" src="./js/formContacto.js"></script>
+    <script type="text/javascript">
+    $(document).ready(function() {
+        $('#enviar').on('click', function(event) {
 
-  $('#enviar').on('click', function(event) {
-
-    event.preventDefault();
-
-    //objeto nuevo al que cargamos los datos que el usuario puso en los inputs a los que identificamos por su ID
-    var obj = {};
-    obj.nombre = document.getElementById('nombre_usuario').value;
-    obj.apellido = document.getElementById('ape_usuario').value;
-    obj.direccion = document.getElementById('direccion_usuario').value;
-
-    // convertimos el objeto a formato JSON
-    var parametros = JSON.stringify(obj);
-
-    console.log("URL del js es: " + document.URL)
-
-    console.log("grabar parametros" + parametros);
-
-    $.post('./php/grabar.php', "x=" + parametros,
-                  function (data, status, xhr) {
-                      if ( console && console.log ) {
-                  console.log( "La solicitud se ha completado correctamente." );
-                  
-                  document.getElementById('nombre_usuario').value = '';
-              document.getElementById('ape_usuario').value = '';
-              document.getElementById('direccion_usuario').value = '';
-              }
-                  }
-              );
-  });
-});</script>
+            event.preventDefault();
+            enviarFormContacto();
+        });
+    });
+    </script>
 </head>
 
 <body>
-  <div id="header">
-    <table class="tabla-header">
-      <tr>
-       <td id="columna-logo"><img src="./img/logo_metior.png" id="logo"></td>
-       <td><strong>Metior</strong></td>
-     </tr>
-   </table>
-   <table class="tabla-header">
-    <tr>
-      <td id="columna-b-ini">
-        <button id="boton-inicio" class="mdc-button">Inicio</button>
-        <script type="text/javascript">
-         document.getElementById("boton-inicio").onclick = function () {
-           location.href = "index.html";
-         };
-       </script>
-     </td>
-     <td id="columna-b-func">
-      <button id="boton-como-fun" class="mdc-button">¿Como Funciona?</button>
-      <script type="text/javascript">
-       document.getElementById("boton-como-fun").onclick = function () {
-         location.href = "como-funciona.html";
-       };
-     </script>
-   </td>
-   <td id="columna-b-cont">
-    <button id="boton-contacto" class="mdc-button">Contactenos</button>
-    <script type="text/javascript">
-     document.getElementById("boton-contacto").onclick = function () {
-       location.href = "contacto.html";
-     };
-   </script>
- </td>
-</tr>
-</table>
-</div>
-<div id="cuerpo" class="flex-center">
-  <div class="seccion1 fondo2 flex-center">
-    <div class="bloque-contacto flex-center">
-      <h1 class="seccion1-title">Contactenos</h1>
-      <form class="seccion1-sub-title input-field col s6">
-        <input type="text" id="nombre_usuario" placeholder="Nombre"><br><br>
-        <input type="text" id="ape_usuario" placeholder="Apellido"><br><br>
-        <input type="text" id="direccion_usuario" placeholder="Direccion"><br><br>
-        <span style="display: flex;justify-content: space-around;">
-          <input id="enviar" class="mdc-button" style="color:#fff" type="submit">
-          <button id="boton-comprar" style="background-color:white" class="mdc-button">Comprar</button>
-          <script type="text/javascript">
-            document.getElementById("boton-comprar").onclick = function () {
-              location.href = "ventana-compras.html";
-              return false
-            };
-          </script>
-        </span>
-      </form>
+    <div id="header">
+        <table class="tabla-header">
+            <tr>
+                <td id="columna-logo"><img src="./img/logo_metior.png" id="logo"></td>
+                <td><strong>Metior</strong></td>
+            </tr>
+        </table>
+        <table class="tabla-header">
+            <tr>
+                <td id="columna-b-ini">
+                    <button id="boton-inicio" class="mdc-button">Inicio</button>
+                    <script type="text/javascript">
+                    document.getElementById("boton-inicio").onclick = function() {
+                        location.href = "index.html";
+                    };
+                    </script>
+                </td>
+                <td id="columna-b-func">
+                    <button id="boton-como-fun" class="mdc-button">¿Como Funciona?</button>
+                    <script type="text/javascript">
+                    document.getElementById("boton-como-fun").onclick = function() {
+                        location.href = "como-funciona.html";
+                    };
+                    </script>
+                </td>
+                <td id="columna-b-cont">
+                    <button id="boton-contacto" class="mdc-button">Contactenos</button>
+                    <script type="text/javascript">
+                    document.getElementById("boton-contacto").onclick = function() {
+                        location.href = "contacto.html";
+                    };
+                    </script>
+                </td>
+            </tr>
+        </table>
     </div>
-  </div>
-</div>
-<div class="footer">
-  <p style="text-align: center; font-size: 20px">
-    DiagnoDCL | Metior<br>
-    Av. Siempre Viva 1234 | tel: +54 111 1234 567<br>
-    metior@org.ar
-  </p>
-  <p style="text-align: center; font-size: 20px">
-    © Todos los derechos reservados<br>
-    <a href="#">Términos y condiciones</a>
-  </p>
-</div>
+    <div id="cuerpo" class="flex-center">
+        <div class="seccion1 fondo2 flex-center">
+            <div class="bloque-contacto flex-center">
+                <h1 class="seccion1-title">Contactenos</h1>
+                <form class="seccion1-sub-title input-field col s6">
+                    <input type="text" id="nombre_usuario" placeholder="Nombre"><br><br>
+                    <input type="text" id="ape_usuario" placeholder="Apellido"><br><br>
+                    <input type="text" id="direccion_usuario" placeholder="Direccion"><br><br>
+                    <span style="display: flex;justify-content: space-around;">
+                        <input id="enviar" class="mdc-button" style="color:#fff" type="submit">
+                        <button id="boton-comprar" style="background-color:white" class="mdc-button">Comprar</button>
+                        <script type="text/javascript">
+                        document.getElementById("boton-comprar").onclick = function() {
+                            location.href = "ventana-compras.html";
+                            return false
+                        };
+                        </script>
+                    </span>
+                </form>
+            </div>
+        </div>
+    </div>
+    <div class="footer">
+        <p style="text-align: center; font-size: 20px">
+            DiagnoDCL | Metior<br>
+            Av. Siempre Viva 1234 | tel: +54 111 1234 567<br>
+            metior@org.ar
+        </p>
+        <p style="text-align: center; font-size: 20px">
+            © Todos los derechos reservados<br>
+            <a href="#">Términos y condiciones</a>
+        </p>
+    </div>
 </body>
-
-
 
 </html>
