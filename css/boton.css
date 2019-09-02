@@ -7,7 +7,7 @@
   font-family: Roboto, sans-serif;
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
-  font-size: 0.875rem;
+  font-size: 1.5rem;
   line-height: 2.25rem;
   font-weight: 500;
   letter-spacing: 0.0892857143em;
@@ -65,7 +65,7 @@
   display: inline-block;
   width: 18px;
   height: 18px;
-  font-size: 18px;
+  font-size: 1.5rem;
   vertical-align: top;
 }
 [dir=rtl] .mdc-button .mdc-button__icon, .mdc-button .mdc-button__icon[dir=rtl] {
@@ -75,9 +75,9 @@
   margin-right: 0;
 }
 .mdc-button:not(:disabled) {
-  color: #6200ee;
+  color: #212121;
   /* @alternate */
-  color: var(--mdc-theme-primary, #6200ee);
+  color: var(--mdc-theme-primary, #212121);
 }
 
 .mdc-button__label + .mdc-button__icon {
@@ -145,13 +145,13 @@ svg.mdc-button__icon {
 }
 .mdc-button--raised:not(:disabled),
 .mdc-button--unelevated:not(:disabled) {
-  background-color: #6200ee;
+  background-color: #212121;
 }
 @supports not (-ms-ime-align: auto) {
   .mdc-button--raised:not(:disabled),
 .mdc-button--unelevated:not(:disabled) {
     /* @alternate */
-    background-color: var(--mdc-theme-primary, #6200ee);
+    background-color: var(--mdc-theme-primary, #212121);
   }
 }
 .mdc-button--raised:not(:disabled),
@@ -184,14 +184,14 @@ svg.mdc-button__icon {
   border-color: rgba(0, 0, 0, 0.37);
 }
 .mdc-button--outlined:not(:disabled) {
-  border-color: #6200ee;
+  border-color: #212121;
   /* @alternate */
-  border-color: var(--mdc-theme-primary, #6200ee);
+  border-color: var(--mdc-theme-primary, #212121);
 }
 
 .mdc-button--dense {
   height: 32px;
-  font-size: 0.8125rem;
+  font-size: 1.5rem;
 }
 
 @-webkit-keyframes mdc-ripple-fg-radius-in {
@@ -328,12 +328,12 @@ svg.mdc-button__icon {
   height: var(--mdc-ripple-fg-size, 100%);
 }
 .mdc-button::before, .mdc-button::after {
-  background-color: #6200ee;
+  background-color: #212121;
 }
 @supports not (-ms-ime-align: auto) {
   .mdc-button::before, .mdc-button::after {
     /* @alternate */
-    background-color: var(--mdc-theme-primary, #6200ee);
+    background-color: var(--mdc-theme-primary, #212121);
   }
 }
 .mdc-button:hover::before {

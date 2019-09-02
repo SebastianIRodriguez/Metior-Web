@@ -8,45 +8,17 @@
      <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
      <link rel="stylesheet" type="text/css" href="./css/estilos.css"/>
      <link rel="stylesheet" type="text/css" href="./css/boton.css"/>
+     <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+     <script type="text/javascript">
+        $(document).ready(function() {
+          $('#header').load('header.html');
+      });
+    </script>
   </head>
 
   <body>
-      <div id="header">
-      <table class="tabla-header">
-	       <tr>
-		         <td id="columna-logo"><img src="./img/logo_metior.png" id="logo"></td>
-		         <td><strong>Metior</strong></td>
-	      </tr>
-      </table>
-      <table class="tabla-header">
-        <tr>
-          <td id="columna-b-ini">
-            <button id="boton-inicio" class="mdc-button">Inicio</button>
-            <script type="text/javascript">
-               document.getElementById("boton-inicio").onclick = function () {
-               location.href = "index.html";
-               };
-            </script>
-          </td>
-          <td id="columna-b-func">
-            <button id="boton-como-fun" class="mdc-button">¿Como Funciona?</button>
-            <script type="text/javascript">
-               document.getElementById("boton-como-fun").onclick = function () {
-               location.href = "como-funciona.html";
-               };
-            </script>
-          </td>
-          <td id="columna-b-cont">
-            <button id="boton-contacto" class="mdc-button">Contactenos</button>
-            <script type="text/javascript">
-               document.getElementById("boton-contacto").onclick = function () {
-               location.href = "contacto.html";
-               };
-            </script>
-          </td>
-        </tr>
-      </table>
-      </div>
+      <div id="header"></div> 
+
       <div id="cuerpo">
         <h1 id="primer-h1" class="parrafos">¿Que es Metior?</h1>
         <p class="parrafos">
