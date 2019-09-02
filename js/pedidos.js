@@ -7,7 +7,7 @@ function loadListaPedidos() {
         var container = document.getElementById('responsecontainer')
         for (var pedido of pedidos) {
             var para = document.createElement("p")
-            var node = document.createTextNode(pedido)
+            var node = document.createTextNode(JSON.stringify(pedido))
             para.appendChild(node)
             para.setAttribute("class", "text-light")
 

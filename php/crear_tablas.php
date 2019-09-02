@@ -7,7 +7,7 @@ error_reporting(E_ALL);
 
 $db = new mysqli($host, $user, $pass, $base) or die("Unable to connect");
 
-$cliente = $db->query("create table if not exists clientes (
+$cliente = $db->query("create table clientes (
 	orden		int not null primary key auto_increment,
 	cant 		int,
 	apellido	varchar(60),	
