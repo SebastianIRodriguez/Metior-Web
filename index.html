@@ -7,7 +7,6 @@
   <link rel="icon" href="./img/logo_metior.png">
   <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
   <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-  
   <link rel="stylesheet" type="text/css" href="./css/estilos.css" />
   <link rel="stylesheet" type="text/css" href="./css/boton.css" />
 
@@ -15,6 +14,7 @@
   <script type="text/javascript">
     $(document).ready(function() {
       $('#header').load('header.html');
+      $('#footer').load('footer.html');
     });
   </script>
 </head>
@@ -24,17 +24,15 @@
 
   <div id="cuerpo">
     <div w3-include-html="inicio.html"></div> 
+    <div class="seccion1 flex-center">
+      <div class="seccion1-message">
+        <h1 class="seccion1-title">Diagnóstico para Inyección Electrónica</h1>
+        <p class="seccion1-sub-title">Metior es la nueva herramienta para diagnóstico automotor con fantásticas funcionalidades</p>
+      </div>
+
+    </div>
   </div>
-  <div class="footer">
-        <p style="text-align: center; font-size: 20px">
-          DiagnoCl | Metior<br>
-          Av. Siempre Viva 1234 | tel: +54 111 1234 567<br>
-          metior@org.ar
-        </p>
-        <p style="text-align: center; font-size: 20px">
-          © Todos los derechos reservados<br>
-          <a href="#">Términos y condiciones</a>
-        </p>
-  </div>
+  <div id="footer"></div>
 </body>
+
 </html>
