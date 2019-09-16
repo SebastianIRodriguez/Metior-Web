@@ -7,96 +7,32 @@
   <link rel="icon" href="./img/logo_metior.png">
   <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
   <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-  
   <link rel="stylesheet" type="text/css" href="./css/estilos.css" />
   <link rel="stylesheet" type="text/css" href="./css/boton.css" />
-  <link rel="stylesheet" type="text/css" href="./css/form.css"/>
-  <link rel="stylesheet" type="text/css" href="./css/materialize.min.css"/>
 
   <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-  <script type="text/javascript" src="./js/ejemplos.js"></script>
-  <script src="jquery.js"></script>
-
-    <script>
-      var getUrlParameter = function getUrlParameter(sParam) {
-      var sPageURL = window.location.search.substring(1),
-          sURLVariables = sPageURL.split('&'),
-          sParameterName,
-          i;
-
-      for (i = 0; i < sURLVariables.length; i++) {
-          sParameterName = sURLVariables[i].split('=');
-
-          if (sParameterName[0] === sParam) {
-              return sParameterName[1] === undefined ? true : decodeURIComponent(sParameterName[1]);
-          }
-        }
-      };
-      $( document ).ready(function() {
-        var status = getUrlParameter("status");
-          if(status==1)
-            $('#cuerpo').load('como-funciona.html');
-          else if(status==2)
-            $('#cuerpo').load('contacto.html');  
-          else
-            $('#cuerpo').load('inicio.html');
-      });
-    </script>
+  <script type="text/javascript">
+    $(document).ready(function() {
+      $('#header').load('header.html');
+      $('#footer').load('footer.html');
+    });
+  </script>
 </head>
 
 <body>
-  <div id="header">
-    <table class="tabla-header">
-      <tr>
-        <td id="columna-logo"><img src="./img/logo_metior.png" id="logo"></td>
-        <td><strong>Metior</strong></td>
-      </tr>
-    </table>
-    <table class="tabla-header">
-      <tr>
-        <td id="columna-b-ini">
-          <button id="boton-inicio" class="mdc-button">Inicio</button>
-          <script type="text/javascript">
-            document.getElementById("boton-inicio").onclick = function () {
-              $("#cuerpo").load("inicio.html");
-              location.href = '?status=0';
-            };
-          </script>
-        </td>
-        <td id="columna-b-func">
-          <button id="boton-como-fun" class="mdc-button">¿Como Funciona?</button>
-          <script type="text/javascript">
-            document.getElementById("boton-como-fun").onclick = function () {
-              $("#cuerpo").load("como-funciona.html");
-              location.href = '?status=1';
-            };
-          </script>
-        </td>
-        <td id="columna-b-cont">
-          <button id="boton-contacto" class="mdc-button">Contactenos</button>
-          <script type="text/javascript">
-            document.getElementById("boton-contacto").onclick = function () {
-               $("#cuerpo").load("contacto.html");
-               location.href = '?status=2';
-            };
-          </script>
-        </td>
-      </tr>
-    </table>
-  </div>
+  <div id="header"></div>
+
   <div id="cuerpo">
     <div w3-include-html="inicio.html"></div> 
+    <div class="seccion1 flex-center">
+      <div class="seccion1-message">
+        <h1 class="seccion1-title">Diagnóstico para Inyección Electrónica</h1>
+        <p class="seccion1-sub-title">Metior es la nueva herramienta para diagnóstico automotor con fantásticas funcionalidades</p>
+      </div>
+
+    </div>
   </div>
-  <div class="footer">
-        <p style="text-align: center; font-size: 20px">
-          DiagnoCl | Metior<br>
-          Av. Siempre Viva 1234 | tel: +54 111 1234 567<br>
-          metior@org.ar
-        </p>
-        <p style="text-align: center; font-size: 20px">
-          © Todos los derechos reservados<br>
-          <a href="#">Términos y condiciones</a>
-        </p>
-  </div>
+  <div id="footer"></div>
 </body>
+
 </html>

@@ -1,23 +1,67 @@
+<!DOCTYPE html>
+<html>
 
-      <div class="flex-center">
-        <div class="seccion1 fondo2 flex-center">
-          <div class="bloque-contacto flex-center">
-            <h1 class="seccion1-title">Contactenos</h1>
-            <form class="seccion1-sub-title input-field col s6">
-                <input type="text" id="nombre_usuario" placeholder="Nombre"><br><br>
-                <input type="text" id="ape_usuario" placeholder="Apellido"><br><br>
-                <input type="text" id="direccion_usuario" placeholder="Direccion"><br><br>
-                <span style="display: flex;justify-content: space-around;">
-                  <input class="mdc-button" style="color:#fff" type="submit" onclick="grabar();">
-                  <button id="boton-comprar" style="background-color:white" class="mdc-button">Comprar</button>
-                  <script type="text/javascript">
-                       document.getElementById("boton-comprar").onclick = function () {
-                        location.href = "ventana-compras.html";
-			return false
-                       };
-                  </script>
-                </span>
-            </form>
-          </div>
+<head>
+    <meta charset="UTF-8">
+    <title>Metior</title>
+    <link rel="icon" href="./img/logo_metior.png">
+
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" type="text/css" href="./css/materialize.min.css" />
+    <link rel="stylesheet" type="text/css" href="./css/estilos.css" />
+    <link rel="stylesheet" type="text/css" href="./css/boton.css" />
+    <link rel="stylesheet" type="text/css" href="./css/form.css" />
+
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script type="text/javascript" src="./js/formContacto.js"></script>
+    <script type="text/javascript">
+    $(document).ready(function() {
+        $('#header').load('header.html');
+        $('#footer').load('footer.html');
+
+        $('#enviar').on('click', function(event) {
+
+            event.preventDefault();
+            enviarFormContacto();
+        });
+    });
+    </script>
+</head>
+
+<body>
+    <div id="header"></div>
+
+    <div id="cuerpo" class="flex-center">
+        <div class="seccion1 fondo-cont flex-center">
+            <div class="bloque-contacto flex-center">
+                <h1 class="seccion1-title">Contactenos</h1>
+                <form class="seccion1-sub-title input-field col s6">
+                    <input type="text" id="nombre_usuario" placeholder="Nombre"><br><br>
+                    <input type="text" id="ape_usuario" placeholder="Apellido"><br><br>
+                    <input type="text" id="direccion_usuario" placeholder="Direccion"><br><br>
+                    <span style="display: flex;justify-content: space-around;">
+                        <input id="enviar" class="mdc-button" style="color:#fff" type="submit">
+                        <button id="boton-comprar" style="background-color:white" class="mdc-button">Comprar</button>
+                        <script type="text/javascript">
+                        document.getElementById("boton-comprar").onclick = function() {
+                            location.href = "ventana-compras.html";
+                            return false
+                        };
+                        </script>
+                        <button id="boton-pedidos" style="background-color:white" class="mdc-button">Ver Pedidos</button>
+                        <script type="text/javascript">
+                        document.getElementById("boton-pedidos").onclick = function() {
+                            location.href = "pedidos.html";
+                            return false
+                        };
+                        </script>
+                    </span>
+                </form>
+            </div>
         </div>
-      </div>
+    </div>
+    <div id="footer"></div>
+</body>
+
+</html>

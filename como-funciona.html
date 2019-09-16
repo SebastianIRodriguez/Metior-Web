@@ -1,7 +1,32 @@
-<div style="display: flex; flex-direction: column; align-items: center">
-	<h1 id="primer-h1" class="parrafos">¿Que es Metior?</h1>
-	<iframe width="420" height="315" id="video" src="https://www.youtube.com/embed/-7d0ElfTUQ8"></iframe>
-</div>
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+     <title>Metior</title>
+     <link rel="icon" href="./img/logo_metior.png">
+     <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+     <link rel="stylesheet" type="text/css" href="./css/estilos.css"/>
+     <link rel="stylesheet" type="text/css" href="./css/boton.css"/>
+     <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+     <script type="text/javascript">
+        $(document).ready(function() {
+          $('#header').load('header.html');
+          $('#footer').load('footer.html');
+      });
+    </script>
+  </head>
 
+  <body>
+      <div id="header"></div>
 
+      <div id="cuerpo" class="flex-center">
+        <div class="seccion1 fondo-como flex-center">
+          <h1>¿Que es Metior?</h1>
+          <iframe width="420" height="315" id="video" src="https://www.youtube.com/embed/-7d0ElfTUQ8"></iframe>
+        </div>
+      </div>
 
+      <div id="footer"></div>
+  </body>
+</html>
