@@ -10,80 +10,18 @@
   
   <link rel="stylesheet" type="text/css" href="./css/estilos.css" />
   <link rel="stylesheet" type="text/css" href="./css/boton.css" />
-  <link rel="stylesheet" type="text/css" href="./css/form.css"/>
-  <link rel="stylesheet" type="text/css" href="./css/materialize.min.css"/>
 
   <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-  <script type="text/javascript" src="./js/ejemplos.js"></script>
-  <script src="jquery.js"></script>
-
-    <script>
-      var getUrlParameter = function getUrlParameter(sParam) {
-      var sPageURL = window.location.search.substring(1),
-          sURLVariables = sPageURL.split('&'),
-          sParameterName,
-          i;
-
-      for (i = 0; i < sURLVariables.length; i++) {
-          sParameterName = sURLVariables[i].split('=');
-
-          if (sParameterName[0] === sParam) {
-              return sParameterName[1] === undefined ? true : decodeURIComponent(sParameterName[1]);
-          }
-        }
-      };
-      $( document ).ready(function() {
-        var status = getUrlParameter("status");
-          if(status==1)
-            $('#cuerpo').load('como-funciona.html');
-          else if(status==2)
-            $('#cuerpo').load('contacto.html');  
-          else
-            $('#cuerpo').load('inicio.html');
-      });
-    </script>
+  <script type="text/javascript">
+    $(document).ready(function() {
+      $('#header').load('header.html');
+    });
+  </script>
 </head>
 
 <body>
-  <div id="header">
-    <table class="tabla-header">
-      <tr>
-        <td id="columna-logo"><img src="./img/logo_metior.png" id="logo"></td>
-        <td><strong>Metior</strong></td>
-      </tr>
-    </table>
-    <table class="tabla-header">
-      <tr>
-        <td id="columna-b-ini">
-          <button id="boton-inicio" class="mdc-button">Inicio</button>
-          <script type="text/javascript">
-            document.getElementById("boton-inicio").onclick = function () {
-              $("#cuerpo").load("inicio.html");
-              location.href = '?status=0';
-            };
-          </script>
-        </td>
-        <td id="columna-b-func">
-          <button id="boton-como-fun" class="mdc-button">¿Como Funciona?</button>
-          <script type="text/javascript">
-            document.getElementById("boton-como-fun").onclick = function () {
-              $("#cuerpo").load("como-funciona.html");
-              location.href = '?status=1';
-            };
-          </script>
-        </td>
-        <td id="columna-b-cont">
-          <button id="boton-contacto" class="mdc-button">Contactenos</button>
-          <script type="text/javascript">
-            document.getElementById("boton-contacto").onclick = function () {
-               $("#cuerpo").load("contacto.html");
-               location.href = '?status=2';
-            };
-          </script>
-        </td>
-      </tr>
-    </table>
-  </div>
+  <div id="header"></div>
+
   <div id="cuerpo">
     <div w3-include-html="inicio.html"></div> 
   </div>
