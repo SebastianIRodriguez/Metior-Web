@@ -10,6 +10,7 @@
     <title>Comprar Metior</title>
     <link href="./css/colors.css" rel="stylesheet">
     <link href="./css/form-validation.css" rel="stylesheet">
+    <script type="text/javascript" src="./js/formContacto.js"></script>
 </head>
 
 <body class="body-bg">
@@ -187,12 +188,20 @@
             // Loop over them and prevent submission
             var validation = Array.prototype.filter.call(forms, function(form) {
                 form.addEventListener('submit', function(event) {
-                    if (form.checkValidity() === false) {
+                    var validez = form.checkValidity()
+
+                    if (validez === false) {
                         event.preventDefault();
                         event.stopPropagation();
                     }
                     form.classList.add('was-validated');
-                  
+
+                    console.log("Validacion" + validez)
+
+                    if(validez){
+                        enviarFormulario();
+                    }
+
                 }, false);
 
             });

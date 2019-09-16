@@ -14,9 +14,9 @@ $cliente = $db->query("create table clientes (
 	nombre		varchar(60),
 	email 		varchar(60),
 	direccion	varchar(60),
-	provincia	int,
-	pais 		int,
-	cod_post    int
+	provincia	varchar(60),
+	pais 		varchar(60),
+	cod_post    varchar(60)
 )");
 
 $db->close();
