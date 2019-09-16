@@ -47,7 +47,7 @@ function loadListaPedidos() {
             var id = document.createElement("div")
             id.setAttribute("class", "text-light flex-center")
             id.setAttribute("style","width:5%;border-style: solid;border-width: 1px;")
-            id.innerHTML = pedido.id
+            id.innerHTML = pedido.orden
 
             var cant = document.createElement("div")
             cant.setAttribute("class", "text-light flex-center")
