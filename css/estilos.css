@@ -153,6 +153,18 @@ text-transform: uppercase;
   height: 30px;
 }
 
+.navBarVehiculos{
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.borderVehiculos{
+  border: solid !important;
+  border-width: : 1px !important;
+  border-color: #cc6600;
+}
+
 #responsecontainer {
   width: 80%;
 }

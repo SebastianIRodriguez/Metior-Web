@@ -4,11 +4,16 @@
 .text-muted {
   color: #dee2e6; }
 
+.text-primary{
+  color: #cc6600 !important;
+}
+
 .container {
   background-color: #454545; }
 
 .form-control {
   background-color: #212121; }
+
 
 /*!
  * Bootstrap v4.3.1 (https://getbootstrap.com/)
