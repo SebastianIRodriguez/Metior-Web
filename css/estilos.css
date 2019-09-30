@@ -125,7 +125,6 @@ text-transform: uppercase;
   width: 150px;
 }
 #cuerpo{
-  color: #cc6600;
   /*background-color: #454545;*/
   height: 100%;
   width: 100%;
@@ -173,6 +172,7 @@ text-transform: uppercase;
 }
 
 .box{
+  color: #cc6600;
   width: 40%;
   height: auto;
   background-color: #303030;
