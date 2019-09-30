@@ -154,17 +154,42 @@ text-transform: uppercase;
 }
 
 .navBarVehiculos{
-  width: 100%;
+  width: 25%;
   display: flex;
-  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-direction: column;
 }
 
 .borderVehiculos{
+  margin-top: 5px;
   border: solid !important;
   border-width: : 1px !important;
-  border-color: #cc6600;
+  border-color: #212121;
 }
 
 #responsecontainer {
   width: 80%;
+}
+
+.box{
+  width: 40%;
+  height: auto;
+  background-color: #303030;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: column;
+  border-radius: 30px;
+  margin: 20px;
+}
+
+.containerBoxes {
+  width: 100%;
+  height: auto;
+  display: flex;
+  justify-content: space-around;
+  align-items: space-around;
+  flex-wrap: wrap;
+  margin: 10px;
 }
