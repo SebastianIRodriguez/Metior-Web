@@ -8,11 +8,15 @@
      <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
      <link rel="stylesheet" type="text/css" href="./css/estilos.css"/>
      <link rel="stylesheet" type="text/css" href="./css/boton.css"/>
-     <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+     <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js">
+     </script>
+     <script type="text/javascript" src="./js/listadoAutos.js"></script>
+     <script type="text/javascript" src="./js/autosSoportados.js"></script>
      <script type="text/javascript">
         $(document).ready(function() {
           $('#header').load('header.html');
           $('#footer').load('footer.html');
+          printListadoVehiculos();
       });
     </script>
   </head>
@@ -21,7 +25,8 @@
       <div id="header"></div>
 
       <div id="cuerpo" class="flex-center">
-        <div class="seccion1 fondo-como">
+        <!--class="fondo-como"-->
+        <div >
           <div class="navBarVehiculos">
             <a href="#" class="borderVehiculos mdc-button" style="color : #cc6600">Chery</a>
             <a href="#" class="borderVehiculos mdc-button" style="color : #cc6600">Fiat - Alfa</a>
@@ -34,6 +39,9 @@
             <a href="#" class="borderVehiculos mdc-button" style="color : #cc6600">Toyota</a>
             <a href="#" class="borderVehiculos mdc-button" style="color : #cc6600">Volkswagen</a>
             <a href="#" class="borderVehiculos mdc-button" style="color : #cc6600">Modelos OBDII Compatibles</a>
+          </div>
+          <div id="listaVehiculos" style="color: #EEEEEE">
+            
           </div>
         </div>
       </div>
