@@ -1,10 +1,12 @@
 var listado = [
 	{
 		"title": "Chery",
+		"logo": "chery.jpg",
 		"modelos": ["Chery QQ3 y QQ6 (372 - 472) ECU Magnetti Marelli IAW 4AC"]
 	},
 	{
 		"title": "Fiat - Alfa Romeo",
+		"logo": "fiat.jpg",
 		"modelos": [
 			"Uno, Fiorino 1.5L - Palio, Siena, Strada 1.3/1.5/1.6L - IAW 1G7",
 			"Palio, Siena, Marea 1.6L 16V - IAW 1AB-1AF",
@@ -23,6 +25,7 @@ var listado = [
 	},
 	{
 		"title": "Ford",
+		"logo": "ford.jpg",
 		"modelos": [
 			"Escort (97-2003) / Mondeo (94-95) Motor Zetec (1.8/2.0) 16V con EECIV",
 			"Ka, Fiesta, Mondeo (OBDII) con EEC V PWM (96-2003)",
@@ -37,6 +40,7 @@ var listado = [
 	},
 	{
 		"title": "General Motors",
+		"logo": "gm.jpg",
 		"modelos": [
 			"Corsa Classic 1.6 8V (94 - 2008) - Blazer 2.2 DLX (95-97)",
 			"Corsa Classic (GLS) 1.6 16V (97 - 99)",
@@ -53,12 +57,14 @@ var listado = [
 	},
 	{
 		"title": "Mercedes Benz",
+		"logo": "mercedes.jpg",
 		"modelos": [
 			"Sprinter 2.7/3.0L CDI2 con ECU Bosch EDC15C5",
 		]
 	},
 	{
 		"title": "Peugeot - Citröen",
+		"logo": "peugeot.jpg",
 		"modelos": [
 			"Peugeot 106 1.3L, 306 1.6/1.8L, 405 1.6/1.8/2.0L - Citröen Xantía 1.6/1.8/2.0L, Xsara 1.8L - ECU MM 8P",
 			"307, 407, 408 2.0L 16V - Citröen C4 2.0 16V (Caja Manual y Automática) - ECU MM 6LP",
@@ -76,6 +82,7 @@ var listado = [
 	},
 	{
 		"title": "Renault",
+		"logo": "renault.jpg",
 		"modelos": [
 			"Megane I, Laguna, Scenic con Fenix 5.1",
 			"Clío, Megane, Kangoo, Scenic, Twingo, Symbol, Sandero con Sirius 32 - EMS 3132",
@@ -93,12 +100,14 @@ var listado = [
 	},
 	{
 		"title": "Rover",
+		"logo": "rover.jpg",
 		"modelos": [
 			"100 - 200 - 400 con ECU Mems 1.9",
 		]
 	},
 	{
 		"title": "Toyota",
+		"logo": "toyota.png",
 		"modelos": [
 			"Hilux (D-4D) 2.5 2KD - 3.0 1KD (Ver Captura)",
 			"Corolla 1.6L 2006 con ECU Denso"
@@ -106,6 +115,7 @@ var listado = [
 	},
 	{
 		"title": "Volkswagen",
+		"logo": "vw.jpg",
 		"modelos": [
 			"VW Genérico 1 (Gol-Polo ECU Bosch MP9.0 - MM1AVP - MM1AVB, Bora TDI)",
 			"VW Genérico 2 (Crossfox-Suran-Golf 1.6 ME7.5.10)",
@@ -115,6 +125,7 @@ var listado = [
 	},
 	{
 		"title": "Modelos OBDII Compatibles",
+		"image": "",
 		"modelos": [
 			"OBDII 5 baudios (Honda Fit, Gol Trend, MB Sprinter, Chrysler, etc)",
 			"OBDII Fast Ini (Peugeot 408, Clio DCI, Fiat 4DF, etc)",

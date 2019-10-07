@@ -1,25 +1,43 @@
 function printListadoVehiculos() {
 
 	let div = $("#listaVehiculos")
-	console.log(div)
 
 	listado.forEach( function(element, index) {
+
 		let container = $(document.createElement("div"))
-		let titulo = $(document.createElement("h1"))
-		let vehiculos = $(document.createElement("div"))
 
-		titulo.text(element.title)
+		container.load("listadoPorMarcaTemplate.html", () => {
+			container.find("#title").text(element.title)
 
-		element.modelos.forEach( function(element, index) {
-			let modelo = $(document.createElement("p"))
-			modelo.text(element)
+			if(element.logo != ""){
+				container.find("#image").attr('src', "./img/" + element.logo)
+			}
 
-			vehiculos.append(modelo)
-		});
+			let vehiculos = container.children("#listaContainer")
 
-		container.append(titulo)
-		container.append(vehiculos)
+			element.modelos.forEach( function(element, index) {
+				let modelo = $(document.createElement("p"))
+				modelo.text(element)
 
-		div.append(container)
+				vehiculos.append(modelo)
+			});
+
+			container.css(styles.containerSingleList)
+
+			div.append(container)
+		})
+
+		
 	});
+}
+
+
+let styles = {
+  containerSingleList: {
+    display: "flex",
+    flexDirection: 'row',
+    backgroundColor: '#303030',
+    borderRadius: '12px',
+    margin: "10px"
+  }
 }
