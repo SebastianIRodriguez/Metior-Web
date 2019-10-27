@@ -3,6 +3,7 @@
 
 <head>
     <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="">
     <meta name="author" content="">
@@ -45,7 +46,7 @@
                 </ul>
             </div>
             <div class="col-md-8 order-md-1">
-                <h4 class="mb-3 text-light">Billing address</h4>
+                <h4 class="mb-3 text-light">Datos del Envio</h4>
                 <form class="needs-validation" novalidate>
                     <div class="row">
                         <div class="col-md-6 mb-3">
@@ -108,53 +109,7 @@
                     </div>
                     <hr class="mb-4">
                     <h4 class="mb-3 text-light">Pago</h4>
-                    <div class="d-block my-3">
-                        <div class="custom-control custom-radio">
-                            <input id="credit" name="paymentMethod" type="radio" class="custom-control-input" checked required>
-                            <label class="custom-control-label" for="credit">Tarjeta de Credito</label>
-                        </div>
-                        <div class="custom-control custom-radio">
-                            <input id="debit" name="paymentMethod" type="radio" class="custom-control-input" required>
-                            <label class="custom-control-label" for="debit">Tarjeta de Debito</label>
-                        </div>
-                        <div class="custom-control custom-radio">
-                            <input id="paypal" name="paymentMethod" type="radio" class="custom-control-input" required>
-                            <label class="custom-control-label" for="paypal">Paypal</label>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-md-6 mb-3">
-                            <label for="cc-name">Nombre en la Tarjeta</label>
-                            <input type="text" class="form-control" id="cc-name" placeholder="" required>
-                            <small class="text-muted">Nombre completo tal como se muestra en la tarjeta</small>
-                            <div class="invalid-feedback">
-                                El nombre en la tarjeta es requerido
-                            </div>
-                        </div>
-                        <div class="col-md-6 mb-3">
-                            <label for="cc-number">Numero de Tarjeta de Credito</label>
-                            <input type="text" class="form-control" id="cc-number" placeholder="" required>
-                            <div class="invalid-feedback">
-                                El numero de la tarjeta de credito es requerido
-                            </div>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-md-3 mb-3">
-                            <label for="cc-expiration">Fecha de Expiracion</label>
-                            <input type="text" class="form-control" id="cc-expiration" placeholder="" required>
-                            <div class="invalid-feedback">
-                                La fecha de Expiracion es requerida
-                            </div>
-                        </div>
-                        <div class="col-md-3 mb-3">
-                            <label for="cc-expiration">CVV</label>
-                            <input type="text" class="form-control" id="cc-cvv" placeholder="" required>
-                            <div class="invalid-feedback">
-                                El codigo de Seguridad es requerido
-                            </div>
-                        </div>
-                    </div>
+                    <div id="paypal-button-container"></div>
                     <hr class="mb-4">
                     <button class="btn btn-primary btn-lg btn-block" type="submit">Continuar</button>
                 </form>
@@ -208,6 +163,34 @@
         }, false);
 
     })();
+    </script>
+
+    <script src="https://www.paypal.com/sdk/js?client-id=AU2zb7oA8wlWaSOH1UQqU0XfsWZyVcuC5KYO1dxymtCrNQjaG92q6BWoL0DbPcKULqFOEvvRPlG9Q8S_&currency=USD" data-namespace="paypal_sdk"></script>
+    <script>
+        // Render the PayPal button into #paypal-button-container
+        paypal_sdk.Buttons({
+
+            // Set up the transaction
+            createOrder: function(data, actions) {
+                return actions.order.create({
+                    purchase_units: [{
+                        amount: {
+                            value: '0.01'
+                        }
+                    }]
+                });
+            },
+
+            // Finalize the transaction
+            onApprove: function(data, actions) {
+                return actions.order.capture().then(function(details) {
+                    // Show a success message to the buyer
+                    alert('Transaction completed by ' + details.payer.name.given_name + '!');
+                });
+            }
+
+
+        }).render('#paypal-button-container');
     </script>
 </body>
 
