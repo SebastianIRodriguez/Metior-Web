@@ -5,7 +5,7 @@ function enviarFormContacto() {
         nombre: document.getElementById('nombre_usuario').value,
         apellido: document.getElementById('ape_usuario').value,
         mail: document.getElementById('direccion_usuario').value,
-        mensaje: "Hola amiguito"
+        mensaje: document.getElementById('mensaje').value
     }
 
     // convertimos el objeto a formato JSON
@@ -18,7 +18,7 @@ function enviarFormContacto() {
             document.getElementById('nombre_usuario').value = '';
             document.getElementById('ape_usuario').value = '';
             document.getElementById('direccion_usuario').value = '';
-
+            document.getElementById('mensaje').value = "";
         }
     );
 }
