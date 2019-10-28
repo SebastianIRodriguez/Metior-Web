@@ -39,16 +39,16 @@ function printListadoVehiculos() {
 	    					{
 	      					scrollTop: container.offset().top,
    						},1000)
-			}) 
+			})
 
 			boton.addClass("mdc-button")
-	
+
 			boton.css(styles.navItem)
 
 			barra.append(boton)
 		})
 
-		
+
 	});
 }
 
@@ -59,8 +59,8 @@ let styles = {
     flexDirection: 'row',
     backgroundColor: '#303030',
     borderRadius: '12px',
-	marginLeft: "10px",
-	marginRight: "10px",
+	marginLeft: "30px",
+	marginRight: "30px",
 	marginTop: '0px',
 	marginBottom: '30px',
 	boxShadow: '0 4px 8px 0 rgba(0, 0, 0, 0.25), 0 6px 20px 0 rgba(0, 0, 0, 0.25)'
