@@ -70,7 +70,7 @@ function loadListaPedidos() {
             direccion.innerHTML = pedido.direccion
 
             var para = document.createElement("div")
-            para.setAttribute("style","display:flex;flex-direction:row;width:100%")
+            para.css(styles)
 
             para.appendChild(id)
             para.appendChild(cant)
@@ -83,3 +83,15 @@ function loadListaPedidos() {
 
     });
 }
+
+let styles = {
+    display: "flex",
+    flexDirection: 'row',
+    backgroundColor: '#303030',
+    borderRadius: '12px',
+	marginLeft: "30px",
+	marginRight: "30px",
+	marginTop: '0px',
+	marginBottom: '30px',
+	boxShadow: '0 4px 8px 0 rgba(0, 0, 0, 0.25), 0 6px 20px 0 rgba(0, 0, 0, 0.25)'
+  }
