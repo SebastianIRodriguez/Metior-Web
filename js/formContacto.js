@@ -15,10 +15,10 @@ function enviarFormContacto() {
         function(data, status, xhr) {
             console.log(data)
 
-            document.getElementById('nombre_usuario').value = '';
-            document.getElementById('ape_usuario').value = '';
-            document.getElementById('direccion_usuario').value = '';
-            document.getElementById('mensaje').value = "";
+            //document.getElementById('nombre_usuario').value = '';
+            //document.getElementById('ape_usuario').value = '';
+            //document.getElementById('direccion_usuario').value = '';
+            //document.getElementById('mensaje').value = "";
         }
     );
 }
