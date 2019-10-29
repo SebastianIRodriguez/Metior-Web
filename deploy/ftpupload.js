@@ -9,7 +9,7 @@ else {
     uploadToFTP();
 }
 
-function uploadToFTP(files) {
+function uploadToFTP() {
     var ftp = new FtpClient();
     var ftpConfig = getConfiguration();
     console.log("DIRECTORIO: " + process.cwd());
