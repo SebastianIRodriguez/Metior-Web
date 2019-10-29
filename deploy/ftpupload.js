@@ -15,7 +15,7 @@ function uploadToFTP() {
     console.log("DIRECTORIO: " + process.cwd());
 
     console.log("ftp.host =" + ftpConfig.host);
-    console.log("ftp.username =" + ftpConfig.username);
+    console.log("ftp.user =" + ftpConfig.user);
     console.log("ftp.password length =" + ftpConfig.password.length);
     console.log("ftp.localRoot =" + ftpConfig.localRoot);
     console.log("ftp.remoteRoot =" + ftpConfig.remoteRoot);
