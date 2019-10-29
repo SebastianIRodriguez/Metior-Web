@@ -1,0 +1,10 @@
+{
+    "name": "travis-ci-test",
+    "version": "0.0.1",
+    "scripts": {
+        "posttest": "node deploy/ftpupload.js"
+    },
+    "devDependencies": {
+        "ftp-deploy": "^1.1.0"
+    }
+}
