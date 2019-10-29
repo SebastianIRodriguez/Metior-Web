@@ -6,26 +6,7 @@ if (process === null) {
     console.log("process is null");
 }
 else {
-    uploadToFTP(getFiles("./",[]));
-        ftpDeploy.on("uploading", function(data) {
-            data.totalFilesCount; // total file count being transferred
-            data.transferredFileCount; // number of files transferred
-            data.filename; // partial path with filename being uploaded
-        });
-}
-function getFiles(dir, files_) {
-    files_ = files_ || [];
-    var files = fs.readdirSync(dir);
-    for (var i in files) {
-        var name = dir + '/' + files[i];
-    
-        if (fs.statSync(name).isDirectory()) {
-            getFiles(name, files_);
-        } else {
-            files_.push({ full_path: name, rel_path: files[i] });
-        }
-    }
-    return files_;
+    uploadToFTP();
 }
 
 function uploadToFTP(files) {
@@ -40,14 +21,9 @@ function uploadToFTP(files) {
     console.log("ftp.remoteRoot =" + ftpConfig.remoteRoot);
     console.log("ftp.port =" + ftpConfig.port);
 
-    ftp.deploy(ftpConfig, function (err, fileName) {
-        if (err) {
-            console.log("error " + err);
-        }
-        else {
-            console.log("Completed uploading");
-        }
-    });
+    ftp.deploy(ftpConfig)
+        .then(res => console.log("finished:", res))
+        .catch(err => console.log(err)););
 }
 function getConfiguration() {
     return {
