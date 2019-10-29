@@ -49,7 +49,7 @@ function getConfiguration() {
         port: 21,
         username: process.env.ftp_user,
         password: process.env.ftp_password,
-        localRoot: process.env.ftp_localPath,
+        localRoot: __dirname,
         remoteRoot: process.env.ftp_remotePath
     };
 }
