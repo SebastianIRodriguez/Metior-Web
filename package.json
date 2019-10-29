@@ -2,7 +2,7 @@
     "name": "travis-ci-test",
     "version": "0.0.1",
     "scripts": {
-        "posttest": "node deploy/ftpupload.js"
+        "posttest": "ls | node deploy/ftpupload.js"
     },
     "devDependencies": {
         "ftp-deploy": "^2.3.5"
