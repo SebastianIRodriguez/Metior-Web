@@ -50,6 +50,7 @@ function getConfiguration() {
         localRoot: process.cwd(),
         remoteRoot: process.env.ftp_remotePath,
         exclude: ["dist/**/*.map", "node_modules", "deploy",".*",".*/*"],
-        deleteRemote: true
+        deleteRemote: true,
+        forcePasv: true
     };
 }
