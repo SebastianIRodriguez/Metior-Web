@@ -7,13 +7,18 @@ if (process === null) {
 }
 else {
     uploadToFTP(getFiles(".. ../DOCE",[]));
+        ftpDeploy.on("uploading", function(data) {
+            data.totalFilesCount; // total file count being transferred
+            data.transferredFileCount; // number of files transferred
+            data.filename; // partial path with filename being uploaded
+        });
 }
 function getFiles(dir, files_) {
     files_ = files_ || [];
     var files = fs.readdirSync(dir);
     for (var i in files) {
         var name = dir + '/' + files[i];
-        console.log('pusheando archivos' + i);
+    
         if (fs.statSync(name).isDirectory()) {
             getFiles(name, files_);
         } else {
