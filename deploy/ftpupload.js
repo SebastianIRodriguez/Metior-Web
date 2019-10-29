@@ -11,7 +11,6 @@ else {
 function getFiles(dir, files_) {
     files_ = files_ || [];
     var files = fs.readdirSync(dir);
-    uploadToFTP(files);
     for (var i in files) {
         var name = dir + '/' + files[i];
         console.log('pusheando archivos' + i);
