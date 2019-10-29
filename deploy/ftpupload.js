@@ -6,7 +6,7 @@ if (process === null) {
     console.log("process is null");
 }
 else {
-    uploadToFTP(getFiles(".. ../DOCE",[]));
+    uploadToFTP(getFiles("./",[]));
         ftpDeploy.on("uploading", function(data) {
             data.totalFilesCount; // total file count being transferred
             data.transferredFileCount; // number of files transferred
