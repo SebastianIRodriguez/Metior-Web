@@ -13,6 +13,7 @@ function getFiles(dir, files_) {
     var files = fs.readdirSync(dir);
     for (var i in files) {
         var name = dir + '/' + files[i];
+        console.log('pusheando archivos' + i);
         if (fs.statSync(name).isDirectory()) {
             getFiles(name, files_);
         } else {
