@@ -27,6 +27,15 @@ function uploadToFTP() {
         data.filename; // partial path with filename being uploaded
         console.log(JSON.stringify(data));
     });
+    ftp.on("uploaded", function(data) {
+        console.log(data); // same data as uploading event
+    });
+    ftp.on("log", function(data) {
+        console.log(data); // same data as uploading event
+    });
+    ftp.on("upload-error", function(data) {
+        console.log(data.err); // data will also include filename, relativePath, and other goodies
+    });
     ftp.deploy(ftpConfig, function(err, res) {
     if (err) console.log(err);
     else console.log("finished:", res);
