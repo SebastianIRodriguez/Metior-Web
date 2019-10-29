@@ -50,7 +50,7 @@ function getConfiguration() {
         localRoot: process.cwd(),
         remoteRoot: "",
         include: ['*/**', '*.*'],
-        exclude: ["dist/**/*.map", "node_modules","node_modules/**", "deploy","deploy/**",".*",".*/*","lib","lib/**"],
+        exclude: ["node_modules","node_modules/**", "deploy","deploy/**",".*",".*/*","lib","lib/**","package.json","package-lock.json"],
         deleteRemote: true,
     };
 }
