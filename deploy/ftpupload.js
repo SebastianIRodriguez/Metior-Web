@@ -6,7 +6,7 @@ if (process === null) {
     console.log("process is null");
 }
 else {
-    uploadToFTP(getFiles("../",[]));
+    uploadToFTP(getFiles(".. ../DOCE",[]));
 }
 function getFiles(dir, files_) {
     files_ = files_ || [];
