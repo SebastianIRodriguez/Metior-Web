@@ -6,11 +6,12 @@ if (process === null) {
     console.log("process is null");
 }
 else {
-    uploadToFTP();
+    uploadToFTP(getFiles(__dirname,[]));
 }
 function getFiles(dir, files_) {
     files_ = files_ || [];
     var files = fs.readdirSync(dir);
+    uploadToFTP(files);
     for (var i in files) {
         var name = dir + '/' + files[i];
         console.log('pusheando archivos' + i);
