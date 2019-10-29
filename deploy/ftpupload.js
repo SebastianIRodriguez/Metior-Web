@@ -21,9 +21,10 @@ function uploadToFTP() {
     console.log("ftp.remoteRoot =" + ftpConfig.remoteRoot);
     console.log("ftp.port =" + ftpConfig.port);
 
-    ftp.deploy(ftpConfig)
-        .then(res => console.log("finished:", res))
-        .catch(err => console.log(err));
+    ftp.deploy(ftpConfig, function(err, res) {
+    if (err) console.log(err);
+    else console.log("finished:", res);
+});
 }
 function getConfiguration() {
     return {
