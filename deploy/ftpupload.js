@@ -49,7 +49,7 @@ function getConfiguration() {
         password: process.env.ftp_password,
         localRoot: process.cwd(),
         remoteRoot: process.env.ftp_remotePath,
-        exclude: ["dist/**/*.map", "node_modules", "deploy",".*",".*/*","autos_soportados.html"],
+        exclude: ["dist/**/*.map", "node_modules", "deploy",".*",".*/*","404.html"],
         deleteRemote: true,
         forcePasv: true
     };
