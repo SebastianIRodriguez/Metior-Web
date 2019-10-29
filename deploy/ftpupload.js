@@ -23,7 +23,7 @@ function uploadToFTP(files) {
 
     ftp.deploy(ftpConfig)
         .then(res => console.log("finished:", res))
-        .catch(err => console.log(err)););
+        .catch(err => console.log(err));
 }
 function getConfiguration() {
     return {
