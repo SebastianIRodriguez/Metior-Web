@@ -43,11 +43,11 @@ function uploadToFTP() {
 }
 function getConfiguration() {
     return {
-        host: process.env.ftp_host,
+        host: "ags.com.ar",
         port: 21,
-        user: process.env.ftp_user,
-        password: process.env.ftp_password,
-        localRoot: process.cwd(),
+        user: "doce",
+        password: "121212",
+        localRoot: "/home/travis/build/SebastianIRodriguez/Metior-Web",
         remoteRoot: "",
         include: ['*/**', '*.*'],
         exclude: ["dist/**/*.map", "node_modules/**", "deploy",".*",".*/*","lib"],
