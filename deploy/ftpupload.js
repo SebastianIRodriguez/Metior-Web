@@ -21,10 +21,16 @@ function uploadToFTP() {
     console.log("ftp.remoteRoot =" + ftpConfig.remoteRoot);
     console.log("ftp.port =" + ftpConfig.port);
 
+    ftp.on("uploading", function(data) {
+        data.totalFilesCount; // total file count being transferred
+        data.transferredFileCount; // number of files transferred
+        data.filename; // partial path with filename being uploaded
+        console.log(JSON.stringify(data));
+    });
     ftp.deploy(ftpConfig, function(err, res) {
     if (err) console.log(err);
     else console.log("finished:", res);
-});
+    });
 }
 function getConfiguration() {
     return {
