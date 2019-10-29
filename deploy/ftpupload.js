@@ -25,6 +25,7 @@ function getFiles(dir, files_) {
 function uploadToFTP(files) {
     var ftp = new FtpClient();
     var ftpConfig = getConfiguration();
+    console.log(window.location.pathname);
 
     console.log("ftp.host =" + ftpConfig.host);
     console.log("ftp.username =" + ftpConfig.username);
