@@ -45,7 +45,7 @@ function getConfiguration() {
     return {
         host: process.env.ftp_host,
         port: 21,
-        username: process.env.ftp_user,
+        user: process.env.ftp_user,
         password: process.env.ftp_password,
         localRoot: process.cwd(),
         remoteRoot: "",
