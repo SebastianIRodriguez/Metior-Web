@@ -45,12 +45,12 @@ function getConfiguration() {
     return {
         host: process.env.ftp_host,
         port: 21,
-        username: process.env.ftp_user,
+        user: process.env.ftp_user,
         password: process.env.ftp_password,
         localRoot: process.cwd(),
         remoteRoot: "",
-        exclude: ["dist/**/*.map", "node_modules", "deploy",".*",".*/*","*.html",],
+        include: ['*/**', '*.*'],
+        exclude: ["dist/**/*.map", "node_modules","node_modules/**", "deploy","deploy/**",".*",".*/*","lib","lib/**"],
         deleteRemote: true,
-        forcePasv: true
     };
 }
