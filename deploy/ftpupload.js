@@ -33,7 +33,7 @@ function getConfiguration() {
         username: process.env.ftp_user,
         password: process.env.ftp_password,
         localRoot: process.cwd(),
-        remoteRoot: process.env.ftp_remotePath
+        remoteRoot: process.env.ftp_remotePath,
         exclude: ["dist/**/*.map", "node_modules/**", "node_modules/**/.*"]
         //deleteRemote: false
     };
