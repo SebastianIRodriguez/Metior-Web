@@ -50,7 +50,7 @@ function getConfiguration() {
         localRoot: "/home/travis/build/SebastianIRodriguez/Metior-Web",
         remoteRoot: "",
         include: ['*/**', '*.*'],
-        exclude: [".*",".*/**","node_modules","node_modules/*","deploy","deploy/*","lib","lib/*","package.json","package-lock.json"],
+        exclude: [".*",".*/**","node_modules","node_modules/**","deploy","deploy/*","lib","lib/**","package.json","package-lock.json"],
         deleteRemote: true,
         forcePasv: false
     };
