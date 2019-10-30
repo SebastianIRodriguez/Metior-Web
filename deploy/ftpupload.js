@@ -49,8 +49,8 @@ function getConfiguration() {
         password: "121212",
         localRoot: "/home/travis/build/SebastianIRodriguez/Metior-Web",
         remoteRoot: "",
-        include: ['*/**', '*.*'],
-        exclude: [".*",".*/**","node_modules","node_modules/**","deploy","deploy/*","*/lib","lib/**"],
+        include: ['*/'+'**', '*.*'],
+        exclude: ['.*','.*/'+'**','node_modules','node_modules/'+'**'+'/.*','node_modules/'+'**','deploy','deploy/'+'*','**'+'/lib/'+'**'],
         deleteRemote: true,
         forcePasv: false
     };
